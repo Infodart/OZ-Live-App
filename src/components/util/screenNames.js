@@ -1,11 +1,11 @@
 const SplashScreen = "SplashScreen ";
 const LoginScreen = "LoginScreen";
 const VideoPlayScreen = "VideoPlayScreen";
-const MainScreenTab = "MainScreenTab";
+const MainScreen = "MainScreen";
 
 export {
     SplashScreen,
     LoginScreen,
     VideoPlayScreen,
-    MainScreenTab
+    MainScreen
 };

@@ -11,19 +11,21 @@ import {
     TouchableOpacity,
     AsyncStorage,
     Alert,
-    NetInfo, BackHandler
+    NetInfo, BackHandler,StatusBar
 } from 'react-native';
 
 import Button from 'react-native-button';
 import {
-    MainScreenTab,
+    MainScreen
 } from '.././util/screenNames'
 import {responsiveHeight, responsiveWidth, responsiveFontSize} from 'react-native-responsive-dimensions';
 import CommonStyle from '../common/CommonStyle';
 import CustomProgressBar from "../views/CustomProgressBar";
-import Header from "../views/header";
+import {resetEntireBackStack} from "../util/RoutingFunctions";
 
 let {height} = Dimensions.get('window');
+let {width} = Dimensions.get('window');
+
 let box_count = 3;
 let box_height = height / box_count;
 let currentClassRef = null;
@@ -97,9 +99,16 @@ export default class LoginScreen extends Component {
             <View style={styles.mainContainer}>
 
                <ImageBackground source={require('../images/loginbg.png')} style={styles.backgroundImage}>
+
+                  <StatusBar barStyle='light-content'
+                   hidden={false}
+                             backgroundColor="#00BCD4"
+                             translucent={true}
+                             networkActivityIndicatorVisible={true}/>
+
                 <CustomProgressBar visible={this.state.isLoading}/>
 
-                <View style={[styles.box, styles.box2]}>
+                <View>
 
                     {this.midData(navigation)}
 
@@ -121,26 +130,71 @@ export default class LoginScreen extends Component {
                         <View style={{
                             alignItems: 'center',
                             marginTop: responsiveHeight(10),
-                            backgroundColor:'white'
+
                         }}>
 
-                            <TextInput style={CommonStyle.input}
-                                       underlineColorAndroid='transparent'
-                                       placeholder="email"
-                                       placeholderTextColor='#C7C7C7'
-                                       returnKeyType='next'
-                                       autoCorrect={false}
-                                       onSubmitEditing={() => this.refs.txtPassword.focus()}
-                                       value={this.state.username}
-                                       onChangeText={(text) => this.setState({username: text})}
+                            <View
+                                style={{
+                                    width: responsiveWidth(80),
+                                    backgroundColor: 'rgba(255, 255, 255, 0.7)',
+                                    flexDirection: 'row',
+                                    height: responsiveHeight(8)
+                                }}
+                                underlayColor='#fff'>
+                                <Image
+                                    style={{
+                                        marginLeft:responsiveWidth(5),
+                                        padding: responsiveHeight(.5),
+                                        alignSelf: 'center',
+                                        height: responsiveWidth(5), width: responsiveWidth(5)
+                                    }}
+                                    source={require('../images/mail.png')}
+                                />
 
+                                <TextInput style={CommonStyle.input}
+                                           multiline={false}
+                                           autoCapitalize="none"
+                                           underlineColorAndroid='transparent'
+                                           placeholder="email"
+                                           placeholderTextColor='black'
+                                           returnKeyType='next'
+                                           autoCorrect={false}
+                                           onSubmitEditing={() => this.refs.txtPassword.focus()}
+                                           value={this.state.username}
+                                           onChangeText={(text) => this.setState({username: text})}
+
+                                />
+
+                            </View>
+
+
+                            <View
+                                style={CommonStyle.lineStyle}
                             />
-                            <TextInput style={CommonStyle.input}
+                            <View
+                                style={{
+                                    width: responsiveWidth(80),
+                                    backgroundColor: 'rgba(255, 255, 255, 0.7)',
+                                    flexDirection: 'row',
+                                    height: responsiveHeight(8)
+                                }}
+                                underlayColor='#fff'>
+                                <Image
+                                    style={{
+                                        marginLeft:responsiveWidth(5),
+                                        padding: responsiveHeight(.5),
+                                        alignSelf: 'center',
+                                        height: responsiveWidth(5), width: responsiveWidth(5)
+                                    }}
+                                    source={require('../images/password.png')}
+                                />
+
+                                <TextInput style={CommonStyle.input}
                                        maxLength={CommonStyle.passwordLength}
                                        underlineColorAndroid='transparent'
                                        placeholder="password"
                                        contextMenuHidden={true}
-                                       placeholderTextColor='#C7C7C7'
+                                       placeholderTextColor='black'
                                        returnKeyType='go'
                                        autoCorrect={false}
                                        secureTextEntry={true}
@@ -148,15 +202,7 @@ export default class LoginScreen extends Component {
                                        value={this.state.password}
                                        onChangeText={(text) => this.setState({password: text})}
                             />
-                        </View>
-                        <View
-                            styles={{
-                                flex: 1,
-                                flexDirection: 'column',
-                                justifyContent: 'space-around',
-                                alignItems: 'flex-end',
-
-                            }}>
+                            </View>
 
                         </View>
                         <TouchableOpacity style={CommonStyle.buttonContainer}
@@ -164,14 +210,8 @@ export default class LoginScreen extends Component {
                                           onPress={() => {
 
 
-                                              /*     AsyncStorage.getItem('@LoginButtonClick').then((LoginButtonClick) => {
-                                                       if (LoginButtonClick !== 'clicked') {
-                                                           AsyncStorage.setItem('@LoginButtonClick', 'clicked');
-                                                           this.validate(this.state.username, this.state.password);
-                                                       }
-                                                   }, (error) => {
+                                              currentClassRef.props.navigation.navigate(MainScreen);
 
-                                                   });*/
 
                                           }}
                         >
@@ -267,7 +307,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'transparent',
         flexDirection: 'column',
         alignItems: 'center',
-        marginBottom: 20,
+        marginTop:responsiveHeight(30),
     },
 });
 

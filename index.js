@@ -6,11 +6,12 @@ import {name as appName} from './app.json';
 
 import Splash from './src/components/screens/Splash'
 import LoginScreen from './src/components/screens/LoginScreen'
-
+import MainScreen from "./src/components/screens/MainScreen";
 
 import {StackNavigator} from 'react-navigation';
 
 import React, {Component} from 'react'
+
 
 const NavigationModule = StackNavigator(
     {
@@ -20,6 +21,9 @@ const NavigationModule = StackNavigator(
         },
         LoginScreen: {
             screen: LoginScreen,
+        },
+        MainScreen: {
+            screen: MainScreen,
         },
     }
     , {

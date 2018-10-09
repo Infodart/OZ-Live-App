@@ -15,7 +15,6 @@ export default class Splash extends React.PureComponent {
     }
 
     constructor(props) {
-        debugger
         super(props);
 
     }
@@ -31,7 +30,6 @@ export default class Splash extends React.PureComponent {
 
     componentDidMount() {
         const {navigation} = this.props;
-        debugger
         SplashScreen.hide()
 
         resetEntireBackStack(LoginScreen, navigation);

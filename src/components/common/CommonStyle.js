@@ -7,9 +7,7 @@ import Color from '../common/Color'
 const styles = {
 
     BaseUrl: "https:///",
-    // PasswordValidation: '\nMust contain 1 lowercase character,\n1 Uppercase character,\n1 Numeric character,\nAt least one special character,\nMust be 8 characters or longer.',
     PasswordValidation: 'Password must be a minimum of 8 characters, contain one uppercase character, and one numeric character.',
-    //PasswordValidationLabel: 'Must contain 1 lowercase character, 1 uppercase character,1 numeric character,at least one special character,must be 8 characters or longer.',
     PasswordValidationLabel: 'Password must be a minimum of 8 characters, contain one uppercase character, and one numeric character.',
 
     //Message
@@ -34,15 +32,32 @@ const styles = {
         backgroundColor: Color.lightGray
     },
     headerWithBackView: {
-        height: Platform.OS === 'ios' ? responsiveHeight(7.6) : responsiveHeight(8)
+        height: Platform.OS === 'ios' ? responsiveHeight(10) : responsiveHeight(8),
+        width:'100%'
+    },
+    headertextStyle: {
+        color: Color.whiteColor,
+        fontSize: responsiveFontSize(3.5),
+        alignItems: 'center',
+        alignSelf: 'center',
+        textAlign: 'center',
+        marginLeft: responsiveWidth(12)
+    },
+    headerviewStyle:{
+        flex:1,
+        flexDirection:'row',
+        backgroundColor:'red',
+        height:responsiveHeight(70),
+        width:'100%'
     },
     input: {
-        marginTop: responsiveHeight(1),
-        marginBottom: responsiveHeight(2),
+        marginLeft:responsiveWidth(3),
         height: responsiveHeight(7),
         paddingLeft: responsiveWidth(3),
         width: responsiveWidth(80),
         fontSize: responsiveFontSize(2),
+        alignSelf: 'center',
+        color:'black'
     },
     buttonStyle: {
         flex: 1,
@@ -52,18 +67,17 @@ const styles = {
         padding: responsiveWidth(2),
     },
     lineStyle: {
-        width: responsiveWidth(89),
+        width: responsiveWidth(80),
         alignItems: 'center',
-        marginLeft: responsiveWidth(.4),
         justifyContent: 'center',
-        height: responsiveHeight(0.4),
+        height: responsiveHeight(0.2),
         alignSelf: 'center',
-        backgroundColor: '#DBDBDB',
+        backgroundColor: '#d40b27',
     },
     buttonContainer: {
         backgroundColor: Color.black,
         width: responsiveWidth(80),
-        height: responsiveHeight(7),
+        height: responsiveHeight(9),
         alignItems: 'center',
         padding: 5,
         justifyContent: 'center',
