@@ -1,0 +1,675 @@
+{
+  "data": [
+    {
+      "_firs_record":"Contains all the fields you will ever need. The rest of the records include more fields you can safely ignore",
+      "id": "fc531fc3-f142-429a-8716-e60acf09abe5",
+      "channelId": "9f16f362-abad-4042-9e26-a69759347bd9",
+      "video": {
+        "id": "2d5770c2-e387-433c-9b81-1fc673b0c2ec",
+        "isPreview": false,
+        "metadata": {
+          "episodeNumber": 21,
+          "description": "Önnur þáttaröð Útsvars frá vetrinum 2008-2009 þar sem 24 stærstu bæjarfélög landsins keppa sín á milli í skemmtilegum spurningaleik. Sigmar Guðmundsson og Þóra Arnórsdóttir stýra þættinum. Dómari og spurningahöfundur er Ólafur Bjarni Guðnason. Útsendingu stjórnar Helgi Jóhannesson. e."
+        },
+        "playableFrom": null,
+        "playableUntil": "2018-10-24T00:00:00.000Z",
+        "posterUrl": "https://d3pwgdagcpl4mv.cloudfront.net/oz/image/upload//v1537144404/gbw84se4sjkvvzdsswba.jpg",
+        "sourceType": "stream",
+        "title": "Úr Gullkistu RÚV: Útsvar 2008-2009"
+      },
+      "duration": 0,
+      "isHighlight": false,
+      "startTime": "2018-09-24T13:00:00.000Z",
+      "type": "regular",
+      "_links": {
+        "streamUrlShort": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6&limit=3",
+        "streamUrl": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6"
+      }
+    },
+    {
+      "video": {
+        "allowMoments": true,
+        "channelId": "b922de02-3eba-4f65-8497-bca5b31948b6",
+        "collectionId": "2fbe172b-7a89-46c7-ad20-5c2aa4bb55dd",
+        "contentType": "episode",
+        "createdAt": "2018-09-17T00:17:44.642Z",
+        "duration": 6420,
+        "excludedCountries": [],
+        "externalId": "361489",
+        "genres": [],
+        "id": "85ebc0fc-c8ca-4924-9e1d-20c9a77c1775",
+        "ingestionStatus": "done",
+        "isPreview": false,
+        "isPromo": false,
+        "metadata": {
+          "episodeNumber": 66,
+          "description": "Útsending frá leik Fjölnis og Breiðabliks í Pepsí deild karla."
+        },
+        "playableFrom": "2018-09-24T05:01:39.000Z",
+        "playableUntil": "2018-10-26T08:05:00.000Z",
+        "playbackCountries": [
+          "IS"
+        ],
+        "posterUrl": "https://d3pwgdagcpl4mv.cloudfront.net/oz/image/upload//v1537765301/m5kqo0bxclp0ckun4hea.jpg",
+        "priority": 0,
+        "published": true,
+        "recordedSlotId": "5e89a611-620c-4ee9-a8ca-1dd71a2f2328",
+        "sourceType": "stream",
+        "tags": [],
+        "title": "Fjölnir - Breiðablik",
+        "updatedAt": "2018-09-17T00:17:44.642Z",
+        "_links": {
+          "streamUrlShort": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6&limit=3",
+          "streamUrl": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6"
+        },
+        "_userInfo": {
+          "isPlayable": true
+        }
+      },
+      "channelId": "b922de02-3eba-4f65-8497-bca5b31948b6",
+      "commentaryCounter": 0,
+      "createdAt": "2018-09-18T00:11:24.337Z",
+      "duration": 0,
+      "externalId": "591514763",
+      "hasCommentary": false,
+      "id": "30bba96d-c4ea-4480-964b-1823a357de38",
+      "isHighlight": false,
+      "metadata": {
+        "estimatedDuration": 6000
+      },
+      "payPerViewEnabled": false,
+      "prices": {
+        "payPerView": [
+          {
+            "currency": "USD",
+            "amount": 4.99,
+            "tier": 4
+          },
+          {
+            "currency": "EUR",
+            "amount": 4.99,
+            "tier": 4
+          },
+          {
+            "currency": "ISK",
+            "amount": 690,
+            "tier": 4
+          },
+          {
+            "currency": "DKK",
+            "amount": 39,
+            "tier": 4
+          },
+          {
+            "currency": "SEK",
+            "amount": 50,
+            "tier": 4
+          },
+          {
+            "currency": "NOK",
+            "amount": 55,
+            "tier": 4
+          }
+        ]
+      },
+      "startTime": "2018-09-24T12:45:00.000Z",
+      "streamId": "8a4c2e36-fef5-41bf-b4fa-3c13be80f581",
+      "type": "regular",
+      "updatedAt": "2018-09-18T00:11:24.337Z",
+      "useAntenna": false,
+      "videoId": "85ebc0fc-c8ca-4924-9e1d-20c9a77c1775",
+      "_links": {
+        "streamUrlShort": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6&limit=3",
+        "streamUrl": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6"
+      }
+    },
+    {
+      "video": {
+        "allowMoments": true,
+        "channelId": "b922de02-3eba-4f65-8497-bca5b31948b6",
+        "collectionId": "12d2832b-7d46-4688-be6e-7b77ab97117c",
+        "contentType": "episode",
+        "createdAt": "2018-09-17T00:18:06.649Z",
+        "excludedCountries": [],
+        "externalId": "361774",
+        "genres": [],
+        "id": "fa408478-8e7b-435f-811a-715496132e98",
+        "ingestionStatus": "awaitingFile",
+        "isPreview": false,
+        "isPromo": false,
+        "metadata": {
+          "episodeNumber": 19
+        },
+        "playableFrom": null,
+        "playableUntil": "2018-10-24T10:40:00.000Z",
+        "playbackCountries": [
+          "IS"
+        ],
+        "priority": 0,
+        "published": true,
+        "sourceType": "stream",
+        "tags": [],
+        "title": "AC Milan - Atalanta",
+        "updatedAt": "2018-09-17T00:18:06.649Z",
+        "posterUrl": "https://d3pwgdagcpl4mv.cloudfront.net/oz/image/upload//v1535388604/djktiehlxhz5u7kgzsn5.png"
+      },
+      "channelId": "b922de02-3eba-4f65-8497-bca5b31948b6",
+      "commentaryCounter": 0,
+      "createdAt": "2018-09-18T02:11:49.068Z",
+      "duration": 0,
+      "externalId": "591514961",
+      "hasCommentary": false,
+      "id": "eaf3f1b7-3266-41a2-b895-a76683a8a79e",
+      "isHighlight": false,
+      "metadata": {
+        "estimatedDuration": 6000
+      },
+      "payPerViewEnabled": false,
+      "prices": {
+        "payPerView": [
+          {
+            "currency": "USD",
+            "amount": 4.99,
+            "tier": 4
+          },
+          {
+            "currency": "EUR",
+            "amount": 4.99,
+            "tier": 4
+          },
+          {
+            "currency": "ISK",
+            "amount": 690,
+            "tier": 4
+          },
+          {
+            "currency": "DKK",
+            "amount": 39,
+            "tier": 4
+          },
+          {
+            "currency": "SEK",
+            "amount": 50,
+            "tier": 4
+          },
+          {
+            "currency": "NOK",
+            "amount": 55,
+            "tier": 4
+          }
+        ]
+      },
+      "startTime": "2018-09-24T12:00:00.000Z",
+      "streamId": "fb4a42a0-ce17-4a9f-a949-3641322fba82",
+      "type": "live",
+      "updatedAt": "2018-09-18T02:11:49.068Z",
+      "useAntenna": false,
+      "videoId": "fa408478-8e7b-435f-811a-715496132e98",
+      "_links": {
+        "streamUrlShort": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6&limit=3",
+        "streamUrl": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6"
+      }
+    },
+    {
+      "video": {
+        "allowMoments": true,
+        "channelId": "b922de02-3eba-4f65-8497-bca5b31948b6",
+        "collectionId": "12d2832b-7d46-4688-be6e-7b77ab97117c",
+        "contentType": "episode",
+        "createdAt": "2018-09-17T00:17:49.352Z",
+        "duration": 6160,
+        "excludedCountries": [],
+        "externalId": "361775",
+        "genres": [],
+        "id": "4957e6f0-8ba4-4828-8c00-3479a0ac8cc3",
+        "ingestionStatus": "done",
+        "isPreview": false,
+        "isPromo": false,
+        "metadata": {
+          "description": "Útsending frá leik Frosinone og Juventus í ítölsku úrvalsdeildinni.",
+          "episodeNumber": 20
+        },
+        "playableFrom": "2018-09-24T05:02:17.000Z",
+        "playableUntil": "2018-10-24T12:20:00.000Z",
+        "playbackCountries": [
+          "IS"
+        ],
+        "posterUrl": "https://d3pwgdagcpl4mv.cloudfront.net/oz/image/upload//v1537765339/gyeoijhr8gpxo5fmu0lh.jpg",
+        "priority": 0,
+        "published": true,
+        "recordedSlotId": "9cbad673-b907-4fe1-92b5-387d09f844a6",
+        "sourceType": "stream",
+        "tags": [],
+        "title": "Frosinone - Juventus",
+        "updatedAt": "2018-09-17T00:17:49.352Z"
+      },
+      "channelId": "b922de02-3eba-4f65-8497-bca5b31948b6",
+      "commentaryCounter": 0,
+      "createdAt": "2018-09-17T00:17:50.369Z",
+      "duration": 0,
+      "externalId": "591647989",
+      "hasCommentary": false,
+      "id": "f590132a-0446-42d9-b4e9-3ac54ed1ef8a",
+      "isHighlight": false,
+      "metadata": {
+        "estimatedDuration": 7500
+      },
+      "payPerViewEnabled": false,
+      "prices": {
+        "payPerView": [
+          {
+            "currency": "USD",
+            "amount": 4.99,
+            "tier": 4
+          },
+          {
+            "currency": "EUR",
+            "amount": 4.99,
+            "tier": 4
+          },
+          {
+            "currency": "ISK",
+            "amount": 690,
+            "tier": 4
+          },
+          {
+            "currency": "DKK",
+            "amount": 39,
+            "tier": 4
+          },
+          {
+            "currency": "SEK",
+            "amount": 50,
+            "tier": 4
+          },
+          {
+            "currency": "NOK",
+            "amount": 55,
+            "tier": 4
+          }
+        ]
+      },
+      "startTime": "2018-09-23T18:25:00.000Z",
+      "streamId": "5ba93339-d8b3-45d7-9489-fbdfe76d7025",
+      "type": "live",
+      "updatedAt": "2018-09-17T00:17:50.369Z",
+      "useAntenna": false,
+      "videoId": "4957e6f0-8ba4-4828-8c00-3479a0ac8cc3",
+      "_meta": {
+        "isNowPlaying": true,
+        "position": 68591
+      },
+      "_links": {
+        "streamUrlShort": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6&limit=3",
+        "streamUrl": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6"
+      }
+    },
+    {
+      "video": {
+        "allowMoments": true,
+        "channelId": "b922de02-3eba-4f65-8497-bca5b31948b6",
+        "collectionId": "33cfc642-6bd2-40de-8d41-6def8534ba61",
+        "contentType": "episode",
+        "createdAt": "2018-09-17T00:17:22.887Z",
+        "duration": 6010,
+        "excludedCountries": [],
+        "externalId": "362720",
+        "genres": [],
+        "id": "44719ed6-cb18-410f-a5b3-7b4444cd72e3",
+        "ingestionStatus": "done",
+        "isPreview": false,
+        "isPromo": false,
+        "metadata": {
+          "description": "Bein útsending frá leik Villarreal og Valencia í spænsku úrvalsdeildinni.",
+          "episodeNumber": 34
+        },
+        "playableFrom": "2018-09-24T05:01:40.000Z",
+        "playableUntil": "2018-10-21T14:10:00.000Z",
+        "playbackCountries": [
+          "IS"
+        ],
+        "posterUrl": "https://d3pwgdagcpl4mv.cloudfront.net/oz/image/upload//v1537765301/azmg0yhlacezprys3nfh.jpg",
+        "priority": 0,
+        "published": true,
+        "recordedSlotId": "8c1ee09d-7b6f-4c6a-ae6a-b102762098c9",
+        "sourceType": "stream",
+        "tags": [],
+        "title": "Villarreal - Valencia",
+        "updatedAt": "2018-09-17T00:17:22.887Z"
+      },
+      "channelId": "b922de02-3eba-4f65-8497-bca5b31948b6",
+      "commentaryCounter": 0,
+      "createdAt": "2018-09-17T00:18:13.094Z",
+      "duration": 0,
+      "externalId": "591648083",
+      "hasCommentary": false,
+      "id": "9f68a8b8-ef75-442f-8238-e92de549e16b",
+      "isHighlight": false,
+      "metadata": {
+        "estimatedDuration": 7500
+      },
+      "payPerViewEnabled": false,
+      "prices": {
+        "payPerView": [
+          {
+            "currency": "USD",
+            "amount": 4.99,
+            "tier": 4
+          },
+          {
+            "currency": "EUR",
+            "amount": 4.99,
+            "tier": 4
+          },
+          {
+            "currency": "ISK",
+            "amount": 690,
+            "tier": 4
+          },
+          {
+            "currency": "DKK",
+            "amount": 39,
+            "tier": 4
+          },
+          {
+            "currency": "SEK",
+            "amount": 50,
+            "tier": 4
+          },
+          {
+            "currency": "NOK",
+            "amount": 55,
+            "tier": 4
+          }
+        ]
+      },
+      "startTime": "2018-09-23T14:10:00.000Z",
+      "streamId": "0710be16-7d6d-4334-a813-b2168a08a804",
+      "type": "live",
+      "updatedAt": "2018-09-17T00:18:13.094Z",
+      "useAntenna": false,
+      "videoId": "44719ed6-cb18-410f-a5b3-7b4444cd72e3",
+      "_meta": {
+        "isNowPlaying": true,
+        "position": 83891
+      },
+      "_links": {
+        "streamUrlShort": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6&limit=3",
+        "streamUrl": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6"
+      }
+    },
+    {
+      "video": {
+        "allowMoments": true,
+        "channelId": "b53c43cb-8505-4c85-8a7b-be6799d3a11f",
+        "collectionId": "5efa52f7-3ad0-4d57-ba6d-bb3b9f1ce379",
+        "contentType": "episode",
+        "createdAt": "2017-11-27T00:07:29.952Z",
+        "excludedCountries": [],
+        "externalId": "siminn-DPH783",
+        "genres": [],
+        "id": "3cf07464-1a08-4c9f-91c5-b402f548be16",
+        "ingestionStatus": "awaitingFile",
+        "isPreview": false,
+        "isPromo": false,
+        "metadata": {
+          "episodeNumber": 83,
+          "seasonNumber": 15
+        },
+        "playableFrom": null,
+        "playableUntil": null,
+        "playbackCountries": [
+          "GLOBAL"
+        ],
+        "priority": 0,
+        "published": true,
+        "sourceType": "stream",
+        "tags": [],
+        "title": "Dr. Phil",
+        "updatedAt": "2017-11-27T00:07:29.952Z",
+        "posterUrl": "https://d3pwgdagcpl4mv.cloudfront.net/oz/image/upload//v1504181692/cssnqukxt1hss1veswnc.jpg"
+      },
+      "channelId": "b53c43cb-8505-4c85-8a7b-be6799d3a11f",
+      "commentaryCounter": 0,
+      "createdAt": "2018-09-24T01:37:38.972Z",
+      "duration": 0,
+      "externalId": "siminn-154362",
+      "hasCommentary": false,
+      "id": "f9c2d888-1fba-46a4-ae91-5ed4e61b2105",
+      "isHighlight": false,
+      "metadata": {},
+      "payPerViewEnabled": false,
+      "prices": {
+        "payPerView": [
+          {
+            "currency": "USD",
+            "amount": 4.99,
+            "tier": 4
+          },
+          {
+            "currency": "EUR",
+            "amount": 4.99,
+            "tier": 4
+          },
+          {
+            "currency": "ISK",
+            "amount": 690,
+            "tier": 4
+          },
+          {
+            "currency": "DKK",
+            "amount": 39,
+            "tier": 4
+          },
+          {
+            "currency": "SEK",
+            "amount": 50,
+            "tier": 4
+          },
+          {
+            "currency": "NOK",
+            "amount": 55,
+            "tier": 4
+          }
+        ]
+      },
+      "startTime": "2018-09-24T13:15:00.000Z",
+      "streamId": "dbedc594-93af-4742-95e6-549116d201c7",
+      "type": "regular",
+      "updatedAt": "2018-09-24T01:37:38.972Z",
+      "useAntenna": false,
+      "videoId": "3cf07464-1a08-4c9f-91c5-b402f548be16",
+      "_meta": {
+        "isNowPlaying": true,
+        "position": 791
+      },
+      "_links": {
+        "streamUrlShort": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6&limit=3",
+        "streamUrl": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6"
+      }
+    },
+    {
+      "video": {
+        "allowMoments": true,
+        "channelId": "9e7e974e-1621-4986-9895-fa04f61becab",
+        "collectionId": "8cdf6279-4186-4060-a8b5-9061bb4cce30",
+        "contentType": "episode",
+        "createdAt": "2018-08-01T14:43:45.384Z",
+        "excludedCountries": [],
+        "externalId": "gen-58852",
+        "genres": [],
+        "id": "3b8140c1-a38e-4286-b53d-4ad91ea854bb",
+        "ingestionStatus": "awaitingFile",
+        "isPreview": false,
+        "isPromo": false,
+        "metadata": {
+          "description": "Sagan af því hvernig Stephan G. Stephansson skáld festi rætur í Vesturheimi. Leikstjóri, handritshöfundur og klipping: Jón Egill Bergþórsson. Nýja Bíó. 2000."
+        },
+        "playableFrom": null,
+        "playableUntil": null,
+        "playbackCountries": [
+          "GLOBAL"
+        ],
+        "priority": 0,
+        "published": true,
+        "sourceType": "stream",
+        "tags": [],
+        "title": "Að láta ekki baslið smækka sig (e)",
+        "updatedAt": "2018-08-01T14:43:45.384Z",
+        "posterUrl": "https://ddpk8as099jdd.cloudfront.net/channels/9e7e974e-1621-4986-9895-fa04f61becab/poster"
+      },
+      "channelId": "9e7e974e-1621-4986-9895-fa04f61becab",
+      "commentaryCounter": 0,
+      "createdAt": "2018-08-01T14:43:46.510Z",
+      "duration": 0,
+      "externalId": "gen-58852",
+      "hasCommentary": false,
+      "id": "c48e9ed4-25cd-41f5-b878-12e00600d935",
+      "isHighlight": false,
+      "metadata": {},
+      "payPerViewEnabled": false,
+      "prices": {
+        "payPerView": [
+          {
+            "currency": "USD",
+            "amount": 4.99,
+            "tier": 4
+          },
+          {
+            "currency": "EUR",
+            "amount": 4.99,
+            "tier": 4
+          },
+          {
+            "currency": "ISK",
+            "amount": 690,
+            "tier": 4
+          },
+          {
+            "currency": "DKK",
+            "amount": 39,
+            "tier": 4
+          },
+          {
+            "currency": "SEK",
+            "amount": 50,
+            "tier": 4
+          },
+          {
+            "currency": "NOK",
+            "amount": 55,
+            "tier": 4
+          }
+        ]
+      },
+      "startTime": "2018-08-13T19:00:00.000Z",
+      "streamId": "858feb6c-d677-4d9a-b984-412c326151c1",
+      "type": "regular",
+      "updatedAt": "2018-08-01T14:43:46.510Z",
+      "useAntenna": false,
+      "videoId": "3b8140c1-a38e-4286-b53d-4ad91ea854bb",
+      "_meta": {
+        "isNowPlaying": true,
+        "position": 3608891
+      },
+      "_links": {
+        "streamUrlShort": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6&limit=3",
+        "streamUrl": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6"
+      }
+    },
+    {
+      "video": {
+        "allowMoments": true,
+        "channelId": "836fc557-f9d0-4d72-8f82-7279e2f7cf9e",
+        "collectionId": "347009b7-160b-400a-b718-9091a17391ca",
+        "contentType": "episode",
+        "createdAt": "2017-08-31T13:44:21.035Z",
+        "excludedCountries": [],
+        "externalId": "gen-73166",
+        "genres": [],
+        "id": "b48a13fe-376e-425e-9c40-1088ca25b9bb",
+        "ingestionStatus": "awaitingFile",
+        "isPreview": false,
+        "isPromo": false,
+        "metadata": {
+          "description": "Karlalandsliðið í knattspyrnu er á leið á HM í Rússlandi. Við kynnumst leikmönnum landsliðsins sem eiga rætur að rekja til landsbyggðanna."
+        },
+        "playableFrom": null,
+        "playableUntil": null,
+        "playbackCountries": [
+          "GLOBAL"
+        ],
+        "priority": 0,
+        "published": true,
+        "sourceType": "stream",
+        "tags": [],
+        "title": "Lengri leiðin (e)",
+        "updatedAt": "2018-04-25T14:09:54.729Z",
+        "posterUrl": "https://ddpk8as099jdd.cloudfront.net/channels/836fc557-f9d0-4d72-8f82-7279e2f7cf9e/poster"
+      },
+      "channelId": "836fc557-f9d0-4d72-8f82-7279e2f7cf9e",
+      "commentaryCounter": 0,
+      "createdAt": "2018-02-16T11:28:56.025Z",
+      "duration": 0,
+      "externalId": "gen-73166",
+      "hasCommentary": false,
+      "id": "8847141b-01a1-4088-ab50-2c0ba4a9198e",
+      "isHighlight": false,
+      "metadata": {},
+      "payPerViewEnabled": false,
+      "prices": {
+        "payPerView": [
+          {
+            "currency": "USD",
+            "amount": 4.99,
+            "tier": 4
+          },
+          {
+            "currency": "EUR",
+            "amount": 4.99,
+            "tier": 4
+          },
+          {
+            "currency": "ISK",
+            "amount": 690,
+            "tier": 4
+          },
+          {
+            "currency": "DKK",
+            "amount": 39,
+            "tier": 4
+          },
+          {
+            "currency": "SEK",
+            "amount": 49,
+            "tier": 4
+          },
+          {
+            "currency": "NOK",
+            "amount": 55,
+            "tier": 4
+          },
+          {
+            "currency": "TRY",
+            "amount": 17.99,
+            "tier": 4
+          }
+        ]
+      },
+      "startTime": "2018-08-13T19:30:00.000Z",
+      "streamId": "e35562f0-29a6-443a-86a9-08a9779f055f",
+      "type": "regular",
+      "updatedAt": "2018-04-25T14:09:55.852Z",
+      "useAntenna": false,
+      "videoId": "b48a13fe-376e-425e-9c40-1088ca25b9bb",
+      "_meta": {
+        "isNowPlaying": true,
+        "position": 3607091
+      },
+      "_links": {
+        "streamUrlShort": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6&limit=3",
+        "streamUrl": "https://playlist.oz.com/live/4ddfe38e-63b0-4781-bebb-b47c60596348/playlist.m3u8?token=bd394391518f455427ee92153633c6"
+      }
+    }
+  ]
+}

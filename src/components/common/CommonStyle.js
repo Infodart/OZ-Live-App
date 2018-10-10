@@ -32,7 +32,8 @@ const styles = {
         backgroundColor: Color.lightGray
     },
     headerWithBackView: {
-        height: Platform.OS === 'ios' ? responsiveHeight(10) : responsiveHeight(8),
+        height: Platform.OS === 'ios' ? responsiveHeight(10) : responsiveHeight(10),
+        marginTop:Platform.OS === 'ios' ? responsiveHeight(0) : responsiveHeight(3),
         width:'100%'
     },
     headertextStyle: {
