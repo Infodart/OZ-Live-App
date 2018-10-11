@@ -37,7 +37,7 @@ let currentClassRef = null;
 let Connected;
 
 
-let paramsFromPrevScreen, jsonData;
+let paramsFromPrevScreen, jsonData, listVisible = true, onFullScreenCount = 0;
 
 
 const theme = {
@@ -77,7 +77,6 @@ export default class MainScreen extends Component {
 
         this.state = {
             isLoading: false,
-
         }
 
         this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
@@ -97,13 +96,24 @@ export default class MainScreen extends Component {
     }
 
     handleBackButtonClick() {
+        this.props.navigation.pop();
+        // BackHandler.exitApp()
+        return true;
+    }
 
-        BackHandler.exitApp()
+    shouldComponentUpdate(nextProps, nextState) {
+        debugger
+        console.log(nextProps + nextState)
+
+        /*if (listVisible)
+            return true;
+        else
+            return false;*/
         return true;
     }
 
 
-    componentDidMount() {
+     componentDidMount() {
         currentClassRef = this;
         NetInfo.isConnected.addEventListener('connectionChange', this.handleConnectionChange);
         NetInfo.isConnected.fetch()
@@ -118,6 +128,7 @@ export default class MainScreen extends Component {
         this.setState({
             dataSource: jsonData.data,
         })
+
         //console.log('data',dataSource)
     }
 
@@ -136,20 +147,36 @@ export default class MainScreen extends Component {
 
     }
 
-    play() {
-        this.video.play()
-        //this.video.seekTo(25)
-    }
-
-    pause() {
-        this.video.pause()
-    }
-
     onFullScreen(status) {
         // Set the params to pass in fullscreen status to navigationOptions
+
+        debugger
+
+        if (status) {
+            listVisible = false;
+        }
+        else {
+            listVisible = true;
+        }
         this.props.navigation.setParams({
             fullscreen: !status
         })
+        onFullScreenCount++;
+
+
+        /*if (onFullScreenCount == 2) {
+            if (status) {
+                listVisible = false;
+            }
+            else {
+                listVisible = true;
+            }
+            this.props.navigation.setParams({
+                fullscreen: !status
+            })
+
+            onFullScreenCount = 0;
+        }*/
     }
 
     render() {
@@ -158,88 +185,122 @@ export default class MainScreen extends Component {
         console.disableYellowBox = true;
         const {navigation} = this.props;
 
-        return (
-            <View style={styles.mainContainer}>
-                <View style={CommonStyle.headerWithBackView}>
-                    <Header headerText='Sports' navigationProp={this.props.navigation}/>
-                </View>
-                <ScrollView style={styles.container}>
+        if (listVisible) {
+            debugger
+            return (
+                <View style={styles.mainContainer}>
+                    <View style={CommonStyle.headerWithBackView}>
+                        <Header headerText='Sports' navigationProp={this.props.navigation}
+                                visible={this.state.headerVisible}/>
+                    </View>
+                    <ScrollView style={styles.container}>
 
-                    <ImageBackground source={require('../images/homebg.png')} style={styles.backgroundImage}>
+                        <ImageBackground source={require('../images/homebg.png')} style={styles.backgroundImage}>
 
-                        {/*<StatusBar barStyle='light-content'
+                            {/*<StatusBar barStyle='light-content'
                                hidden={false}
                                backgroundColor="#00BCD4"
                                translucent={true}
                                networkActivityIndicatorVisible={true}/>*/}
 
-                        <CustomProgressBar visible={this.state.isLoading}/>
+                            <CustomProgressBar visible={this.state.isLoading}/>
 
-
-                        <View
-                            style={{
-                                flex:1,
-                                height: responsiveHeight(35),
-                                width: undefined,
-                            }}>
-                            <Video
+                            <View
                                 style={{
-                                    height: responsiveHeight(35),
+                                    flex: 1,
+                                    height: responsiveHeight(40),
                                     width: undefined,
-                                    resizeMode: 'cover'
-                                }}
-                                allowsExternalPlayback={true}
-                                ignoreSilentSwitch={"obey"}
-                                allowCrossProtocolRedirects={true}
-                                hls={true}
-                                autoPlay
-                                onFullScreen={status => this.onFullScreen(status)}
-                                loop={true}
-                                rotateToFullScreen={true}
-                                url={'http://www.archive.org/download/MickeyMouse-RunawayTrain/Film-42.mp4'}
-                                ref={(ref) => {
-                                    this.video = ref
-                                }}
-                                theme={theme}
-                            />
-                        </View>
-                        <View style={{
-                            flex: 9,
-                            width: width,
-                        }}>
+                                }}>
+                                <Video
+                                    style={{
+                                        height: responsiveHeight(40),
+                                        width: undefined,
+                                        resizeMode: 'cover'
+                                    }}
+                                    allowsExternalPlayback={true}
+                                    ignoreSilentSwitch={"obey"}
+                                    allowCrossProtocolRedirects={true}
+                                    hls={true}
+                                    autoPlay
+                                    onFullScreen={status => this.onFullScreen(status)}
+                                    loop={true}
+                                    rotateToFullScreen={true}
+                                    url={'https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8'}
+                                    ref={(ref) => {
+                                        this.video = ref
+                                    }}
+                                    theme={theme}
+                                />
+                            </View>
+                            <View
 
-                            {/*{this.midData(navigation)}*/}
+                                visible={this.state.listVisible}
+                                style={{
+                                    flex: 9,
+                                    width: width,
+                                }}>
 
-
-                            <FlatList
-                                alwaysBounceVertical={false}
-                                data={this.state.dataSource}
-                                ref={(ref) => {
-                                    this.flatListRef = ref;
-                                }}
-                                renderItem={({item, index}) =>
-
-                                    <View
-                                        style={{flex: 1}}>
-
-                                        {this.renderRow(item, index)}
+                                {/*{this.midData(navigation)}*/}
 
 
-                                    </View>
-                                }
-                                onEndReachedThreshold={0.7}
-                                numColumns={1}
-                                keyExtractor={(item, index) => index}
-                            />
+                                <FlatList
+
+                                    alwaysBounceVertical={false}
+                                    data={this.state.dataSource}
+                                    ref={(ref) => {
+                                        this.flatListRef = ref;
+                                    }}
+                                    renderItem={({item, index}) =>
+
+                                        <View
+                                            style={{flex: 1}}>
+
+                                            {this.renderRow(item, index)}
 
 
-                        </View>
+                                        </View>
+                                    }
+                                    numColumns={1}
+                                    keyExtractor={(item, index) => index}
+                                />
 
-                    </ImageBackground>
-                </ScrollView>
-            </View>
 
-        );
+                            </View>
+
+                        </ImageBackground>
+                    </ScrollView>
+                </View>
+
+            );
+        }
+        else {
+            debugger
+            return (
+
+                <Video
+                    style={{
+                        height: height,
+                        width: undefined,
+                        resizeMode: 'cover'
+                    }}
+                    allowsExternalPlayback={true}
+                    ignoreSilentSwitch={"obey"}
+                    allowCrossProtocolRedirects={true}
+                    hls={true}
+                    autoPlay
+                    onFullScreen={status => this.onFullScreen(status)}
+                    loop={true}
+                    rotateToFullScreen={true}
+                    url={'https://video-dev.github.io/streams/x36xhzz/x36xhzz.m3u8'}
+                    ref={(ref) => {
+                        this.video = ref
+                    }}
+                    theme={theme}
+                />
+
+
+            );
+        }
 
 
     }
@@ -285,6 +346,7 @@ export default class MainScreen extends Component {
     handleConnectionChange = (isConnected) => {
         this.setState({isConnected});
         Connected = isConnected;
+
         if (isConnected) {
 
             this.setState({Connected: isConnected});
@@ -298,6 +360,7 @@ export default class MainScreen extends Component {
     }
 
 }
+
 
 const styles = StyleSheet.create({
 
