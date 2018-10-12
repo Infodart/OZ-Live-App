@@ -1,15 +1,22 @@
 import React, {Component} from 'react';
 
-import {StyleSheet, Text, View, AsyncStorage, Platform, BackHandler} from 'react-native';
+import {View} from 'react-native';
+
+//Screen to navigate
 import {
     LoginScreen,
-    MainScreenTab,
 } from '.././util/screenNames'
-import {resetEntireBackStack, resetEntireBackStackWithParams} from "../util/RoutingFunctions";
+
+//For Navigation
+import {resetEntireBackStack} from "../util/RoutingFunctions";
+
+////Imported Library for SplashScreen
 import SplashScreen from 'react-native-splash-screen';
 
 export default class Splash extends React.PureComponent {
 
+
+    //To disable the Header
     static navigationOptions = {
         header: null
     }
@@ -18,8 +25,9 @@ export default class Splash extends React.PureComponent {
         super(props);
 
     }
-
     render() {
+
+        //To disable the yellow warning messages
         console.disableYellowBox = true;
         return (
             <View>
@@ -30,23 +38,13 @@ export default class Splash extends React.PureComponent {
 
     componentDidMount() {
         const {navigation} = this.props;
+
+        //Hide SplashScreen
         SplashScreen.hide()
 
+
+
+        //Navigate to LoginScreen
         resetEntireBackStack(LoginScreen, navigation);
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        backgroundColor: 'white',
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    title: {
-        fontSize: 28,
-        fontWeight: 'bold',
-        color: '#724CA8',
-
-    }
-})

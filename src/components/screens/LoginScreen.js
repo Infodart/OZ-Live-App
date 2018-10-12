@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+
+//Import Controls
 import {
     StyleSheet,
     View,
@@ -9,31 +11,32 @@ import {
     Dimensions,
     TextInput,
     TouchableOpacity,
-    AsyncStorage,
-    Alert,
     NetInfo, BackHandler, StatusBar
 } from 'react-native';
 
-import Button from 'react-native-button';
+
+//Screen to navigate
 import {
-    MainScreen
+    MainScreenNew
 } from '.././util/screenNames'
-import {responsiveHeight, responsiveWidth, responsiveFontSize} from 'react-native-responsive-dimensions';
+
+//Imported Library for responsive screens for different platforms
+import {responsiveHeight, responsiveWidth} from 'react-native-responsive-dimensions';
+
+//Imported class for getting CommonStyles
 import CommonStyle from '../common/CommonStyle';
+
+//Imported Custom ProgressBAr View
 import CustomProgressBar from "../views/CustomProgressBar";
-import {resetEntireBackStack} from "../util/RoutingFunctions";
-import VideoComponent from "../views/VideoComponent";
 
-let {height} = Dimensions.get('window');
-let {width} = Dimensions.get('window');
-
-let box_count = 3;
-let box_height = height / box_count;
-let currentClassRef = null;
-let Connected;
+//Imported ColorStyle Classs
+import ColorStyle from "../common/Color";
 
 
-let userID, paramsFromPrevScreen;
+//Variables used in this component
+let {height} = Dimensions.get('window'), currentClassRef = null, Connected;
+
+
 export default class LoginScreen extends Component {
     static navigationOptions = {
         header: null
@@ -43,39 +46,40 @@ export default class LoginScreen extends Component {
 
         super(props);
 
+
+        //Defined states used in this component
         this.state = {
             isLoading: false,
-
             username: '',
             password: '',
-            user: null,
         }
 
+
+        //For handling BackPress in Android
         this.handleBackButtonClick = this.handleBackButtonClick.bind(this);
-        try {
-            AsyncStorage.setItem('@selectedIcon', '');
-
-            paramsFromPrevScreen = this.props.navigation.state.params;
-        } catch (error) {
-
-        }
-
 
     }
 
     componentWillMount() {
+
+        //Added BackPress Listener
         BackHandler.addEventListener('hardwareBackPress', this.handleBackButtonClick);
     }
 
-    handleBackButtonClick() {
 
+    //On BackPress Event
+    handleBackButtonClick() {
         BackHandler.exitApp()
         return true;
     }
 
 
     componentDidMount() {
+
+        //Assigned current class Reference for using in events
         currentClassRef = this;
+
+        //For Checking Network Connection
         NetInfo.isConnected.addEventListener('connectionChange', this.handleConnectionChange);
         NetInfo.isConnected.fetch()
             .then((isConnected) => {
@@ -84,16 +88,32 @@ export default class LoginScreen extends Component {
     }
 
 
+    //Method to check Internet connection available or not
+    handleConnectionChange = (isConnected) => {
+        this.setState({isConnected});
+        Connected = isConnected;
+        if (isConnected) {
+
+            this.setState({Connected: isConnected});
+            // console.log('is connected: ');
+
+        } else {
+            this.setState({Connected: isConnected});
+            //console.log('Not connected: ');
+
+        }
+    }
+
     componentWillUnmount() {
+
+        //Removed Added Listeners
         NetInfo.isConnected.removeEventListener('connectionChange', this.handleConnectionChange);
         BackHandler.removeEventListener('hardwareBackPress', this.handleBackButtonClick);
 
     }
 
     render() {
-
-        currentClassRef = this;
-        console.disableYellowBox = true;
+        //Assigned current class props to a constant variable
         const {navigation} = this.props;
 
         return (
@@ -104,7 +124,7 @@ export default class LoginScreen extends Component {
 
                         <StatusBar barStyle='light-content'
                                    hidden={false}
-                                   backgroundColor="#00BCD4"
+                                   backgroundColor={ColorStyle.red}
                                    translucent={true}
                                    networkActivityIndicatorVisible={true}/>
 
@@ -125,6 +145,8 @@ export default class LoginScreen extends Component {
 
     }
 
+
+    //For displaying view
     midData(navigation) {
         return (
 
@@ -211,7 +233,7 @@ export default class LoginScreen extends Component {
                 <TouchableOpacity style={CommonStyle.buttonContainer}
 
                                   onPress={() => {
-                                      this.props.navigation.navigate(MainScreen);
+                                      this.props.navigation.navigate(MainScreenNew);
                                   }}
                 >
                     <Text style={CommonStyle.buttonText}
@@ -222,63 +244,6 @@ export default class LoginScreen extends Component {
         );
     }
 
-    handleConnectionChange = (isConnected) => {
-        this.setState({isConnected});
-        Connected = isConnected;
-        if (isConnected) {
-
-            this.setState({Connected: isConnected});
-            // console.log('is connected: ');
-
-        } else {
-            this.setState({Connected: isConnected});
-            //console.log('Not connected: ');
-
-        }
-    }
-
-
-    validate(userId, password) {
-
-        let username = userId.toLowerCase().trim();
-
-        if (username.length > 0 && password.length > 0) {
-
-
-            let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            if (reg.test(username) === false) {
-                AsyncStorage.setItem('@LoginButtonClick', '');
-                Alert.alert('', CommonStyle.emailIncorrect);
-                this.setState({username: username})
-
-            }
-            else {
-
-                if (!Connected) {
-                    AsyncStorage.setItem('@LoginButtonClick', '');
-                    return Alert.alert('', CommonStyle.noInternet)
-                }
-
-                this.setState({
-                    isLoading: true
-                });
-
-                this.setState({username: username})
-
-            }
-
-
-        }
-        else if (username.length === 0) {
-            AsyncStorage.setItem('@LoginButtonClick', '');
-            Alert.alert('', CommonStyle.emailEmpty);
-
-        }
-        else if (password.length === 0) {
-            AsyncStorage.setItem('@LoginButtonClick', '');
-            Alert.alert('', CommonStyle.passwordEmpty);
-        }
-    }
 }
 
 
@@ -305,7 +270,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         marginTop: responsiveHeight(30),
-        height:height
+        height: height
     },
 });
 

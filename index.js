@@ -1,17 +1,18 @@
-/** @format */
 
 import {AppRegistry} from 'react-native';
 import {name as appName} from './app.json';
 
+
+//Navigation Screen
 import Splash from './src/components/screens/Splash'
 import LoginScreen from './src/components/screens/LoginScreen'
-import MainScreen from "./src/components/screens/MainScreen";
+import MainScreenNew from "./src/components/screens/MainScreenNew";
 
 import {StackNavigator} from 'react-navigation';
 
-import React, {Component} from 'react'
+import React from 'react'
 
-
+//Added Screens to StackNavigator
 const NavigationModule = StackNavigator(
     {
         SplashScreen: {
@@ -20,13 +21,12 @@ const NavigationModule = StackNavigator(
         },
         LoginScreen: {
             screen: LoginScreen,
-        },
-        MainScreen: {
-            screen: MainScreen,
-        },
+        }, MainScreenNew: {
+            screen: MainScreenNew,
+        }
     }
     , {
-        initialRouteName: 'SplashScreen'
+        initialRouteName: 'SplashScreen'        //First Screen
     }
 );
 

@@ -7,14 +7,14 @@ import {
     Image,
     TouchableOpacity,
 } from 'react-native';
-import {responsiveHeight, responsiveWidth, responsiveFontSize} from 'react-native-responsive-dimensions';
+import {responsiveHeight, responsiveWidth} from 'react-native-responsive-dimensions';
 import CommonStyle from "../common/CommonStyle";
 
 const Header = (props) => {
 
 
     return(
-        <View style={CommonStyle.headerviewStyle} >
+        <View style={CommonStyle.headerViewStyle} >
             <TouchableOpacity
 
                 onPress={()=>{props.navigationProp.pop()}}>
@@ -27,7 +27,7 @@ const Header = (props) => {
                 </View>
             </TouchableOpacity>
 
-            <Text style={CommonStyle.headertextStyle}>{props.headerText}</Text>
+            <Text style={CommonStyle.headerTextStyle}>{props.headerText}</Text>
 
         </View>
 

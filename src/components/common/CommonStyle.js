@@ -24,19 +24,15 @@ const styles = {
     noResponse: 'No response from server, Do you want to retry?',
 
     timeout: 25000,
-    //For SHARE
 
 
-    blankFooterStyle: {
-        flex: .7,
-        backgroundColor: Color.lightGray
-    },
     headerWithBackView: {
-        height: Platform.OS === 'ios' ? responsiveHeight(10) : responsiveHeight(10),
+        flex:1,
+        height: Platform.OS === 'ios' ? responsiveHeight(2) : responsiveHeight(10),
         marginTop:Platform.OS === 'ios' ? responsiveHeight(0) : responsiveHeight(3),
         width:'100%'
     },
-    headertextStyle: {
+    headerTextStyle: {
         color: Color.whiteColor,
         fontSize: responsiveFontSize(3.5),
         alignItems: 'center',
@@ -44,7 +40,7 @@ const styles = {
         textAlign: 'center',
         marginLeft: responsiveWidth(12)
     },
-    headerviewStyle:{
+    headerViewStyle:{
         flex:1,
         flexDirection:'row',
         backgroundColor:'red',
@@ -59,13 +55,6 @@ const styles = {
         fontSize: responsiveFontSize(2),
         alignSelf: 'center',
         color:'black'
-    },
-    buttonStyle: {
-        flex: 1,
-        alignSelf: 'stretch',
-        //backgroundColor: '#fff',
-        flexDirection: 'row',
-        padding: responsiveWidth(2),
     },
     lineStyle: {
         width: responsiveWidth(80),
